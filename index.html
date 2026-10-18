@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>AR Kurchatov</title>
+    <style>body { margin: 0; overflow: hidden; }</style>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
-  <body style="margin: 0px; overflow: hidden;">
-    <a-scene arjs="sourceType: webcam; debugUIEnabled: false">
-      <!-- Hiro — это встроенный маркер. Камера ищет его узор. -->
+  <body>
+    <a-scene arjs="sourceType: webcam; debugUIEnabled: false" embedded>
       <a-marker preset="hiro">
-        <!-- Теперь здесь Курчатов вместо куба -->
-        <a-image src="kurchatov.png" width="1" height="1.5" rotation="90 0 0"></a-image>
+        <a-image src="kurchatov.png" width="0.2" height="0.3" rotation="90 0 0" position="0 0 0"></a-image>
       </a-marker>
-      <a-entity camera look-controls></a-entity>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
